@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dialog</title>
+</head>
+<body>
+
+<button class="launch">Launch modal</button>
+<html-dialog title="test dialog" description="This is a test of my modal dialog element." return=".launch">
+<p>... some dialog content to render ...</p>
+</html-dialog>
+<script type="module" src="./dialog.js"></script>
+
+<script type="module">
+document.querySelector(".launch").addEventListener("click", e => e.target.nextElementSibling.setAttribute("open", ""));
+</script>
+
+</body>
+</html>
